@@ -4,7 +4,11 @@
     "sourceType": "module",
     "allowImportExportEverywhere": true
   },
-  "extends": "airbnb",
+  "extends": [
+      "airbnb",
+      "prettier",
+      "prettier/react"
+  ],
   "env": {
     "browser": true,
     "node": true
@@ -30,7 +34,8 @@
     }],
     "react/jsx-no-bind": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
-    "react/prefer-stateless-function": "off"
+    "react/prefer-stateless-function": "off",
+    "prettier/prettier": ["error",  {"singleQuote": true, "tabWidth": 2}]
   },
   "plugins": [
     "flowtype",
@@ -38,7 +43,8 @@
     "import",
     "promise",
     "compat",
-    "react"
+    "react",
+    "prettier"
   ],
   "settings": {
     "import/resolver": {
